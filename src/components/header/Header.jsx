@@ -9,11 +9,12 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { FaRegBell } from "react-icons/fa";
 import { usePathname } from "next/navigation";
 import { MainNavigationList } from "./ui/MainNavigationList/MainNavigationList";
+import { UserNavigationList } from "./ui/UserNavigationList/UserNavigationList";
 
 export const Header = () => {
   const { windowWidth } = useWindowWidth();
   const pathname = usePathname();
-  const isPathAuth = pathname === "/auth";
+  const isPathAuth = pathname === routes.auth;
 
   return (
     <>
@@ -42,12 +43,15 @@ export const Header = () => {
             {windowWidth > 755 && !isPathAuth && (
               <>
                 <MainNavigationList />
-                <div className="flex items-center">
-                  <DefaultLink
-                    variant="primary"
-                    href={routes.auth}
-                    text="Anmelden"
-                  />
+                <div className="flex items-center gap-4">
+                  <UserNavigationList />
+                  {windowWidth >= 1014 && (
+                    <DefaultLink
+                      variant="primary"
+                      href={routes.auth}
+                      text="Anmelden"
+                    />
+                  )}
                 </div>
               </>
             )}

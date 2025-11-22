@@ -14,7 +14,7 @@ export const MainNavigationList = () => {
         return (
           <li className="relative" key={i}>
             <button
-              className="group flex gap-[4px] items-center h-[36px] font-bold p-[7px] transition linear duration-300 hover:text-light-white"
+              className="group flex gap-1 items-center h-9 font-bold p-[7px] transition linear duration-300 hover:text-light-white"
               type="button"
               onClick={() => setOpenIndex((prev) => (prev === i ? null : i))}
             >
