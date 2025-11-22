@@ -8,6 +8,7 @@ import { IconButton } from "@/shared/ui/IconButton/IconButton";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaRegBell } from "react-icons/fa";
 import { usePathname } from "next/navigation";
+import { MainNavigationList } from "./ui/MainNavigationList/MainNavigationList";
 
 export const Header = () => {
   const { windowWidth } = useWindowWidth();
@@ -40,6 +41,7 @@ export const Header = () => {
 
             {windowWidth > 755 && !isPathAuth && (
               <>
+                <MainNavigationList />
                 <div className="flex items-center">
                   <DefaultLink
                     variant="primary"
