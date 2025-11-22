@@ -40,7 +40,7 @@
   --text-xl: 24px;
   --text-2xl: 32px;
 
-  /* Spacing (margin/padding) */
+  /* Spacing (margin/padding)
   --spacing-xs: 2px;
   --spacing-sm: 4px;
   --spacing-1sm: 6px;
@@ -55,7 +55,7 @@
   --spacing-1xl: 27px;
   --spacing-2xl: 32px;
   --spacing-3xl: 36px;
-  --spacing-4xl: 54px;
+  --spacing-4xl: 54px; */
 
   /* Border radius */
   --radius-xs: 4px;
