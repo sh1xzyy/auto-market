@@ -4,6 +4,17 @@ import { IoIosArrowDown } from "react-icons/io";
 import { useState } from "react";
 import clsx from "clsx";
 import { navigation } from "../../data/navigation";
+import { DropDownMenu } from "../DropDown/DropDownMenu/DropDownMenu";
+import { DropDownMainList } from "../DropDown/DropDownMainList/DropDownMainList";
+import { searchDropDownMenu } from "../../data/searchDropDownMenu";
+import { sellDropDownMenu } from "../../data/sellDropDownMenu";
+import { infoDropDownMenu } from "../../data/infoDropDownMenu";
+
+const dropDownByIndex = [
+  searchDropDownMenu,
+  sellDropDownMenu,
+  infoDropDownMenu,
+];
 
 export const MainNavigationList = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -27,6 +38,12 @@ export const MainNavigationList = () => {
                 size={16}
               />
             </button>
+
+            {openIndex === i && (
+              <DropDownMenu variant="main">
+                <DropDownMainList list={dropDownByIndex[i]} />
+              </DropDownMenu>
+            )}
           </li>
         );
       })}
