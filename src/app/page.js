@@ -1,3 +1,9 @@
+import { MainFilters } from "@/modules/mainFilters";
+
 export default function Home() {
-  return <div>Hello</div>;
+  return (
+    <div>
+      <MainFilters />
+    </div>
+  );
 }

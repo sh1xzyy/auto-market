@@ -1,0 +1,15 @@
+[
+  { "name": "car" },
+  { "name": "motorcycle" },
+  { "name": "bike" },
+  { "name": "truck" },
+  { "name": "van" },
+  { "name": "van-up-to-7.5t" },
+  { "name": "bus" },
+  { "name": "trailer" },
+  { "name": "articulated-lorries" },
+  { "name": "semi-trailer" },
+  { "name": "agriculture" },
+  { "name": "construction-machinery" },
+  { "name": "forklift" }
+]

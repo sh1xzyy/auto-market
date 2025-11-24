@@ -29,13 +29,13 @@ export const Header = () => {
                   <IconButton
                     icon={FaRegBell}
                     className="p-[9px]"
-                    ariaLabel="Notifications button"
+                    aria-label="Notifications button"
                   />
                 )}
                 <IconButton
                   icon={GiHamburgerMenu}
                   className="p-[9px]"
-                  ariaLabel="Burger Menu button"
+                  aria-label="Burger Menu button"
                 />
               </div>
             )}
