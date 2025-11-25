@@ -69,7 +69,13 @@ const FiltersForm = ({ openIndex, vehiclesFields }) => {
               />
             )}
 
-            {item?.type === "radio" && <PaymentMethodRadio />}
+            {item?.type === "radio" && (
+              <Controller
+                name="payment_method"
+                control={control}
+                render={({ field }) => <PaymentMethodRadio {...field} />}
+              />
+            )}
 
             {item?.type === "submit" && (
               <div className="lg:mb-1">

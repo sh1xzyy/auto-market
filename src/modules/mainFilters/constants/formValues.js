@@ -8,7 +8,7 @@ const BASIC_FORM_VALUES = {
 export const CAR_FORM_VALUES = {
   ...BASIC_FORM_VALUES,
   mileage: "",
-  payment_method: "cash",
+  payment_method: "buy",
   year: "",
   isElectro: false,
 };
