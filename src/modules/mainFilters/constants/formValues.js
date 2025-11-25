@@ -1,7 +1,7 @@
 const BASIC_FORM_VALUES = {
   brand: "",
   model: "",
-  price_from: "",
+  price_until: "",
   location: "",
 };
 

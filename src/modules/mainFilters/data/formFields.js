@@ -1,161 +1,120 @@
-import { IoSearch } from "react-icons/io5";
 import { MdEnergySavingsLeaf, MdFrontLoader } from "react-icons/md";
 import { PiTruck, PiWarningCircleLight } from "react-icons/pi";
 import { HiMiniTruck } from "react-icons/hi2";
 import { FaBus, FaTractor, FaTruckMoving, FaTrailer } from "react-icons/fa";
 import { IoIosConstruct } from "react-icons/io";
 
-const filterActions = {
+const FILTER_ACTIONS = {
   id: "filterActions",
   type: "filterActions",
 };
 
+const ICON_BUTTON = {
+  id: "other",
+  type: "iconButton",
+};
+
+const CATEGORY = {
+  id: "category",
+  name: "category",
+  label: "Kategorie",
+  type: "selector",
+};
+
+const BRAND = {
+  id: "brand",
+  name: "brand",
+  label: "Marke",
+  type: "selector",
+};
+
+const MODEL = {
+  id: "model",
+  name: "model",
+  label: "Modell",
+  type: "selector",
+};
+
+const YEAR = {
+  id: "year",
+  name: "year",
+  label: "Erstzulassung ab",
+  type: "selector",
+};
+
+const LOCATION = {
+  id: "location",
+  name: "location",
+  label: "Ort oder PLZ",
+  type: "selector",
+};
+
+const PRICE = {
+  id: "price_until",
+  name: "price_until",
+  label: "Preis bis",
+  type: "selector",
+};
+
+const MILEAGE = {
+  id: "mileage_until",
+  name: "mileage_until",
+  label: "Kilometer bis",
+  type: "selector",
+};
+
 export const passengerCar = [
+  BRAND,
+  MODEL,
+  YEAR,
+  MILEAGE,
   {
-    id: "brand_passenger",
-    name: "brand",
-    label: "Marke",
-    type: "selector",
-  },
-  {
-    id: "model_passenger",
-    name: "model",
-    label: "Modell",
-    type: "selector",
-  },
-  {
-    id: "registerDate_passenger",
-    name: "registerDate",
-    label: "Erstzulassung ab",
-    type: "selector",
-  },
-  {
-    id: "kilometersTo_passenger",
-    name: "kilometersTo",
-    label: "Kilometer bis",
-    type: "selector",
-  },
-  {
-    id: "paymentMethod_passenger",
+    id: "payment_method",
     label: "Zahlungsart",
     type: "radio",
-    radioList: [
-      {
-        id: "paymentMethod_passenger_cash",
-        name: "paymentMethod",
-        value: "cash",
-        label: "Kaufen",
-        type: "radio",
-      },
-      {
-        id: "paymentMethod_passenger_finance",
-        name: "paymentMethod",
-        value: "finance",
-        label: "Leasen",
-        type: "radio",
-      },
-    ],
   },
+  PRICE,
+  LOCATION,
   {
-    id: "priceUntil_passenger",
-    name: "priceUntil",
-    label: "Preis bis",
-    type: "selector",
-  },
-  {
-    id: "cityOrZipCode_passenger",
-    name: "cityOrZipCode",
-    label: "Ort oder PLZ",
-    type: "selector",
-  },
-  {
-    id: "onlyElectricCars_passenger",
-    name: "onlyElectricCars",
+    id: "isElectric",
+    name: "isElectric",
     label: "Nur Elektroautos",
     type: "checkbox",
     icon: <MdEnergySavingsLeaf color="var(--color-blue)" size={16} />,
   },
   {
-    id: "submit_passenger",
-    label: "Angebote",
+    id: "submit_button",
     type: "submit",
-    icon: <IoSearch size={18} />,
   },
-  { ...filterActions, href: "/auto/more-filters" },
+  { ...FILTER_ACTIONS, href: "/auto/more-filters" },
 ];
 
 export const motorBikes = [
   {
-    id: "category_motorBike",
-    name: "category",
+    ...CATEGORY,
     label: "Kategorie",
-    type: "selector",
   },
+  BRAND,
+  MODEL,
+  YEAR,
+  MILEAGE,
+  PRICE,
+  LOCATION,
   {
-    id: "brand_motorBike",
-    name: "brand",
-    label: "Marke",
-    type: "selector",
-  },
-  {
-    id: "model_motorBike",
-    name: "model",
-    label: "Modell",
-    type: "selector",
-  },
-  {
-    id: "registerDate_motorBike",
-    name: "registerDate",
-    label: "Erstzulassung ab",
-    type: "selector",
-  },
-  {
-    id: "kilometersTo_motorBike",
-    name: "kilometersTo",
-    label: "Kilometer bis",
-    type: "selector",
-  },
-  {
-    id: "priceUntil_motorBike",
-    name: "priceUntil",
-    label: "Preis bis",
-    type: "selector",
-  },
-  {
-    id: "cityOrZipCode_motorBike",
-    name: "cityOrZipCode",
-    label: "Ort oder PLZ",
-    type: "selector",
-  },
-  {
-    id: "submit_motorBike",
-    label: "Angebote",
+    id: "submit_button",
     type: "submit",
-    icon: <IoSearch size={18} />,
   },
-  { ...filterActions, href: "/motorcycle/more-filters" },
+  { ...FILTER_ACTIONS, href: "/motorcycle/more-filters" },
   ,
 ];
 
 export const eBikes = [
   {
-    id: "category_eBike",
-    name: "category",
+    ...CATEGORY,
     label: "E-Bike Kategorie",
-    type: "selector",
   },
-  {
-    id: "brand_eBike",
-    name: "brand",
-    label: "Marke",
-    type: "selector",
-  },
-  {
-    id: "model_eBike",
-    name: "model",
-    label: "Modell",
-    type: "selector",
-  },
+  BRAND,
+  MODEL,
   {
     id: "frameSize_eBike",
     name: "frameSize",
@@ -172,114 +131,40 @@ export const eBikes = [
     ariaLabel: "battery capacity",
     type: "selector",
   },
+  PRICE,
+  LOCATION,
   {
-    id: "priceUntil_eBike",
-    name: "priceUntil",
-    label: "Preis bis",
-    type: "selector",
-  },
-  {
-    id: "cityOrZipCode_eBike",
-    name: "cityOrZipCode",
-    label: "Ort oder PLZ",
-    type: "selector",
-  },
-  {
-    id: "submit_eBike",
-    label: "Angebote",
+    id: "submit_button",
     type: "submit",
-    icon: <IoSearch size={18} />,
   },
-  { ...filterActions, href: "/e-bikes/more-filters" },
+  { ...FILTER_ACTIONS, href: "/e-bikes/more-filters" },
   ,
 ];
 
 export const miniTrucks = [
   {
-    id: "miniTruckCategory",
-    category: "field",
-    name: "category",
+    ...CATEGORY,
     label: "Kategorie",
-    type: "selector",
   },
+  BRAND,
+  MODEL,
+  YEAR,
+  MILEAGE,
+  PRICE,
+  LOCATION,
   {
-    id: "miniTruckBrand",
-    category: "field",
-    name: "brand",
-    label: "Marke",
-    type: "selector",
-  },
-  {
-    id: "miniTruckModel",
-    category: "field",
-    name: "model",
-    label: "Modell",
-    type: "selector",
-  },
-  {
-    id: "miniTruckRegisterDate",
-    category: "field",
-    name: "registerDate",
-    label: "Erstzulassung ab",
-    type: "selector",
-  },
-  {
-    id: "miniTruckKilometersTo",
-    category: "field",
-    name: "kilometersTo",
-    label: "Kilometer bis",
-    type: "selector",
-  },
-  {
-    id: "miniTruckPriceUntil",
-    category: "field",
-    name: "priceUntil",
-    label: "Preis bis",
-    type: "selector",
-  },
-  {
-    id: "miniTruckCityOrZipCode",
-    category: "field",
-    name: "cityOrZipCode",
-    label: "Ort oder PLZ",
-    type: "selector",
-  },
-  {
-    id: "miniTruckSubmit",
-    category: "submitButton",
-    label: "Angebote",
+    id: "submit_button",
     type: "submit",
-    icon: <IoSearch size={18} />,
   },
-  { ...filterActions, href: "/mini-trucks/more-filters" },
+  { ...FILTER_ACTIONS, href: "/mini-trucks/more-filters" },
   ,
 ];
 
 export const otherVehicles = [
-  {
-    id: "brand_other_vehicles",
-    name: "brand",
-    label: "Marke",
-    type: "selector",
-  },
-  {
-    id: "model_other_vehicles",
-    name: "model",
-    label: "Modell",
-    type: "selector",
-  },
-  {
-    id: "registerDate_other_vehicles",
-    name: "registerDate",
-    label: "Erstzulassung ab",
-    type: "selector",
-  },
-  {
-    id: "kilometersTo_other_vehicles",
-    name: "kilometersTo",
-    label: "Kilometer bis",
-    type: "selector",
-  },
+  BRAND,
+  MODEL,
+  YEAR,
+  MILEAGE,
   {
     id: "pricing_other_vehicles",
     label: "Preisangabe",
@@ -301,89 +186,64 @@ export const otherVehicles = [
       },
     ],
   },
+  PRICE,
+  LOCATION,
   {
-    id: "priceUntil_other_vehicles",
-    name: "priceUntil",
-    label: "Preis bis",
-    type: "selector",
-  },
-  {
-    id: "cityOrZipCode_other_vehicles",
-    name: "cityOrZipCode",
-    label: "Ort oder PLZ",
-    type: "selector",
-  },
-  {
-    id: "submit_other_vehicles",
-    label: "Angebote",
+    id: "submit_button",
     type: "submit",
-    icon: <IoSearch size={18} />,
   },
-  { ...filterActions, href: "/motorcycle/more-filters" },
+  { ...FILTER_ACTIONS, href: "/motorcycle/more-filters" },
 ];
 
 export const other = [
   {
-    id: "other_lkw",
-    category: "iconButton",
+    ...ICON_BUTTON,
     label: "Lkw über 7,5 t",
-    type: "iconButton",
     icon: <PiTruck color="var(--color-light-orange)" size={45} />,
   },
   {
-    id: "other_trailer",
-    category: "iconButton",
+    ...ICON_BUTTON,
     label: "Anhänger",
-    type: "iconButton",
     icon: <FaTrailer color="var(--color-light-orange)" size={45} />,
   },
   {
-    id: "other_transporter",
-    category: "iconButton",
+    ...ICON_BUTTON,
     label: "Transporter bis 7,5 t",
-    type: "iconButton",
     icon: <HiMiniTruck color="var(--color-light-orange)" size={45} />,
   },
   {
-    id: "other_semiTruck",
-    category: "iconButton",
+    ...ICON_BUTTON,
     label: "Sattelzüge",
-    type: "iconButton",
     icon: <FaTruckMoving color="var(--color-light-orange)" size={45} />,
   },
   {
-    id: "other_semitrailer",
-    category: "iconButton",
+    ...ICON_BUTTON,
     label: "Auflieger",
-    type: "iconButton",
     icon: <FaTrailer color="var(--color-light-orange)" size={45} />,
   },
   {
-    id: "other_bus",
-    category: "iconButton",
-    label: "Busse",
-    type: "iconButton",
+    ...ICON_BUTTON,
+    label: "Sattelzüge",
     icon: <FaBus color="var(--color-light-orange)" size={45} />,
   },
   {
-    id: "other_tractor",
-    category: "iconButton",
+    ...ICON_BUTTON,
+    label: "Busse",
+    icon: <FaTruckMoving color="var(--color-light-orange)" size={45} />,
+  },
+  {
+    ...ICON_BUTTON,
     label: "Agrar",
-    type: "iconButton",
     icon: <FaTractor color="var(--color-light-orange)" size={45} />,
   },
   {
-    id: "other_constructionMachine",
-    category: "iconButton",
+    ...ICON_BUTTON,
     label: "Baumaschinen",
-    type: "iconButton",
     icon: <IoIosConstruct color="var(--color-light-orange)" size={45} />,
   },
   {
-    id: "other_stacker",
-    category: "iconButton",
+    ...ICON_BUTTON,
     label: "Stapler",
-    type: "iconButton",
     icon: <MdFrontLoader color="var(--color-light-orange)" size={45} />,
   },
 ];
