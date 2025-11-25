@@ -1,21 +1,42 @@
+"use client";
+
 import clsx from "clsx";
 import { Button } from "@/shared/ui/Button/Button";
-import Checkbox from "@/shared/ui/Checkbox/Checkbox";
-import { FormProvider, useForm } from "react-hook-form";
+import { Controller, FormProvider, useForm } from "react-hook-form";
 import { PaymentMethodRadio } from "@/shared/ui/PaymentMethodRadio/PaymentMethodRadio";
 import { typeToClass } from "../../data/typeToClass";
 import { IoSearch } from "react-icons/io5";
 import { FilterActions } from "../FilterActions/FilterActions";
 import { Selector } from "@/shared/ui/Selector/Selector";
+import {
+  CAR_FORM_VALUES,
+  E_BIKE_FORM_VALUES,
+  MOTORCYCLE_FORM_VALUES,
+  VAN_FORM_VALUES,
+} from "../../constants/formValues";
+import { Checkbox } from "@/shared/ui/Checkbox/Checkbox";
 
 const FiltersForm = ({ openIndex, vehiclesFields }) => {
+  const getDefaultValues = () => {
+    switch (openIndex) {
+      case 0:
+        return CAR_FORM_VALUES;
+      case 1:
+        return MOTORCYCLE_FORM_VALUES;
+      case 2:
+        return E_BIKE_FORM_VALUES;
+      case 3:
+        return VAN_FORM_VALUES;
+      default:
+        return {};
+    }
+  };
+
   const methods = useForm({
-    defaultValues: {
-      payment_method: "cash",
-    },
+    defaultValues: getDefaultValues(),
   });
 
-  const { handleSubmit } = methods;
+  const { control, handleSubmit } = methods;
 
   const onSubmit = async (values) => {
     try {
@@ -39,7 +60,13 @@ const FiltersForm = ({ openIndex, vehiclesFields }) => {
             {item?.type === "selector" && <Selector item={item} />}
 
             {item?.type === "checkbox" && (
-              <Checkbox Icon={item?.icon} text={item?.label} />
+              <Controller
+                name="isElectro"
+                control={control}
+                render={({ field }) => (
+                  <Checkbox {...field} Icon={item?.icon} text={item?.label} />
+                )}
+              />
             )}
 
             {item?.type === "radio" && <PaymentMethodRadio />}
