@@ -5,9 +5,9 @@ import { HiMiniTruck } from "react-icons/hi2";
 import { FaBus, FaTractor, FaTruckMoving, FaTrailer } from "react-icons/fa";
 import { IoIosConstruct } from "react-icons/io";
 
-const filterButton = {
-  id: "filterButton",
-  type: "filterButton",
+const filterActions = {
+  id: "filterActions",
+  type: "filterActions",
 };
 
 export const passengerCar = [
@@ -81,7 +81,7 @@ export const passengerCar = [
     type: "submit",
     icon: <IoSearch size={18} />,
   },
-  { ...filterButton, href: "/auto/more-filters" },
+  { ...filterActions, href: "/auto/more-filters" },
 ];
 
 export const motorBikes = [
@@ -133,7 +133,7 @@ export const motorBikes = [
     type: "submit",
     icon: <IoSearch size={18} />,
   },
-  { ...filterButton, href: "/motor-bikes/more-filters" },
+  { ...filterActions, href: "/motorcycle/more-filters" },
   ,
 ];
 
@@ -190,7 +190,7 @@ export const eBikes = [
     type: "submit",
     icon: <IoSearch size={18} />,
   },
-  { ...filterButton, href: "/e-bikes/more-filters" },
+  { ...filterActions, href: "/e-bikes/more-filters" },
   ,
 ];
 
@@ -251,7 +251,7 @@ export const miniTrucks = [
     type: "submit",
     icon: <IoSearch size={18} />,
   },
-  { ...filterButton, href: "/mini-trucks/more-filters" },
+  { ...filterActions, href: "/mini-trucks/more-filters" },
   ,
 ];
 
@@ -319,7 +319,7 @@ export const otherVehicles = [
     type: "submit",
     icon: <IoSearch size={18} />,
   },
-  { ...filterButton, href: "/motorcycle/more-filters" },
+  { ...filterActions, href: "/motorcycle/more-filters" },
 ];
 
 export const other = [

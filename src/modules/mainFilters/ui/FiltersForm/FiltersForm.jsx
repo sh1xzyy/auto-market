@@ -87,7 +87,7 @@ const FiltersForm = ({ openIndex, vehiclesFields }) => {
               </div>
             )}
 
-            {item?.type === "filterButton" && <FilterActions item={item} />}
+            {item?.type === "filterActions" && <FilterActions item={item} />}
           </div>
         ))}
       </form>
