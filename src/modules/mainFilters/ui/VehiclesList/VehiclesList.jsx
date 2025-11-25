@@ -1,6 +1,6 @@
 import clsx from "clsx";
-import { vehicleList } from "../data/vehicleList.js";
 import { IconButton } from "@/shared/ui/IconButton/IconButton";
+import { vehicleList } from "../../data/vehicleList";
 
 export const VehiclesList = ({
   openIndex,

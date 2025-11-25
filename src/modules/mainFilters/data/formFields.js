@@ -1,7 +1,5 @@
 import { IoSearch } from "react-icons/io5";
 import { MdEnergySavingsLeaf, MdFrontLoader } from "react-icons/md";
-import { RiResetLeftFill } from "react-icons/ri";
-import { VscSettings } from "react-icons/vsc";
 import { PiTruck, PiWarningCircleLight } from "react-icons/pi";
 import { HiMiniTruck } from "react-icons/hi2";
 import { FaBus, FaTractor, FaTruckMoving, FaTrailer } from "react-icons/fa";
@@ -10,15 +8,6 @@ import { IoIosConstruct } from "react-icons/io";
 const filterButton = {
   id: "filterButton",
   type: "filterButton",
-  actionButton: {
-    label: "Zurücksetzen",
-    icon: <RiResetLeftFill size={18} />,
-  },
-  navigationButton: {
-    label: "Weitere Filter",
-    href: "/moreFilters",
-    icon: <VscSettings size={18} />,
-  },
 };
 
 export const passengerCar = [
@@ -92,7 +81,7 @@ export const passengerCar = [
     type: "submit",
     icon: <IoSearch size={18} />,
   },
-  filterButton,
+  { ...filterButton, href: "/auto/more-filters" },
 ];
 
 export const motorBikes = [
@@ -144,7 +133,8 @@ export const motorBikes = [
     type: "submit",
     icon: <IoSearch size={18} />,
   },
-  filterButton,
+  { ...filterButton, href: "/motor-bikes/more-filters" },
+  ,
 ];
 
 export const eBikes = [
@@ -200,7 +190,8 @@ export const eBikes = [
     type: "submit",
     icon: <IoSearch size={18} />,
   },
-  filterButton,
+  { ...filterButton, href: "/e-bikes/more-filters" },
+  ,
 ];
 
 export const miniTrucks = [
@@ -260,7 +251,8 @@ export const miniTrucks = [
     type: "submit",
     icon: <IoSearch size={18} />,
   },
-  filterButton,
+  { ...filterButton, href: "/mini-trucks/more-filters" },
+  ,
 ];
 
 export const otherVehicles = [
@@ -327,7 +319,7 @@ export const otherVehicles = [
     type: "submit",
     icon: <IoSearch size={18} />,
   },
-  filterButton,
+  { ...filterButton, href: "/motorcycle/more-filters" },
 ];
 
 export const other = [
