@@ -1,0 +1,47 @@
+import clsx from "clsx";
+import { IconButton } from "@/shared/ui/IconButton/IconButton";
+import { vehicleList } from "../../data/vehicleList";
+
+export const VehiclesList = ({
+  openIndex,
+  setOpenIndex,
+  setIsOtherFiltersOpen,
+}) => {
+  return (
+    <ul
+      className="flex justify-center md:min-w-[90px] md:flex-col"
+      aria-label="all vehicles"
+    >
+      {vehicleList.map(({ icon, ariaLabel }, i) => (
+        <li
+          className={clsx(
+            "border-r border-b border-grey w-full md:last:border-b-0",
+            openIndex === i &&
+              "border-b-background-light-black md:border-grey md:border-r-0"
+          )}
+          key={i}
+        >
+          <IconButton
+            className={clsx(
+              "flex items-center justify-center p-[9px] w-full",
+              openIndex !== i && "bg-black hover:bg-background-light-black",
+              openIndex === i && "bg-background-light-black",
+              i === 0 && "lg:rounded-tl-2xl",
+              i === vehicleList.length - 1 && "lg:rounded-bl-2xl"
+            )}
+            iconClassName={clsx(openIndex === i && "fill-light-orange")}
+            icon={icon}
+            size={30}
+            aria-label={ariaLabel}
+            onClick={() => {
+              setOpenIndex(i);
+              setIsOtherFiltersOpen(false);
+            }}
+          />
+        </li>
+      ))}
+    </ul>
+  );
+};
+
+export default VehiclesList;

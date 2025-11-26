@@ -17,8 +17,8 @@ export const Button = ({ variant, text, Icon, ...props }) => {
       )}
       {...props}
     >
-      {Icon && <Icon width={16} height={16} />}
-      <span>{text}</span>
+      {Icon && Icon}
+      <span className="font-bold text-md">{text}</span>
     </button>
   );
 };

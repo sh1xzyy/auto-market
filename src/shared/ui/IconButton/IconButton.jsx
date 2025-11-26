@@ -3,18 +3,16 @@ import clsx from "clsx";
 export const IconButton = ({
   icon: Icon,
   size = 20,
-  onClick,
   className = "",
   iconClassName = "group-hover:fill-light-white",
-  ariaLabel,
   children,
+  ...props
 }) => {
   return (
     <button
       className={clsx("group transition-colors duration-300", className)}
       type="button"
-      onClick={onClick}
-      aria-label={ariaLabel}
+      {...props}
     >
       <Icon
         className={clsx(

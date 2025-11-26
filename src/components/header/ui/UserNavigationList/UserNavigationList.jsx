@@ -35,7 +35,7 @@ export const UserNavigationList = () => {
               className="flex items-center justify-center gap-1 p-[9px]"
               onClick={() => setOpenIndex((prev) => (prev === i ? null : i))}
               icon={item.icon}
-              ariaLabel={item.ariaLabel}
+              aria-label={item.ariaLabel}
             >
               {windowWidth > 755 && windowWidth < 1014 && i === 1 && (
                 <IoIosArrowDown
