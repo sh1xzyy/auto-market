@@ -7,6 +7,7 @@ import { IoIosConstruct } from "react-icons/io";
 const FILTER_ACTIONS = {
   id: "filterActions",
   type: "filterActions",
+  className: "filterActions",
 };
 
 const ICON_BUTTON = {
@@ -72,6 +73,7 @@ export const passengerCar = [
     id: "payment_method",
     label: "Zahlungsart",
     type: "radio",
+    className: "long",
   },
   PRICE,
   LOCATION,
@@ -80,11 +82,13 @@ export const passengerCar = [
     name: "isElectric",
     label: "Nur Elektroautos",
     type: "checkbox",
+    className: "checkbox",
     icon: <MdEnergySavingsLeaf color="var(--color-blue)" size={16} />,
   },
   {
     id: "submit_button",
     type: "submit",
+    className: "submit",
   },
   { ...FILTER_ACTIONS, href: "/auto/more-filters" },
 ];
@@ -93,6 +97,7 @@ export const motorBikes = [
   {
     ...CATEGORY,
     label: "Kategorie",
+    className: "long",
   },
   BRAND,
   MODEL,
@@ -103,6 +108,7 @@ export const motorBikes = [
   {
     id: "submit_button",
     type: "submit",
+    className: "submit",
   },
   { ...FILTER_ACTIONS, href: "/motorcycle/more-filters" },
   ,
@@ -112,6 +118,7 @@ export const eBikes = [
   {
     ...CATEGORY,
     label: "E-Bike Kategorie",
+    className: "long",
   },
   BRAND,
   MODEL,
@@ -136,6 +143,7 @@ export const eBikes = [
   {
     id: "submit_button",
     type: "submit",
+    className: "submit",
   },
   { ...FILTER_ACTIONS, href: "/e-bikes/more-filters" },
   ,
@@ -145,6 +153,7 @@ export const miniTrucks = [
   {
     ...CATEGORY,
     label: "Kategorie",
+    className: "long",
   },
   BRAND,
   MODEL,
@@ -155,6 +164,7 @@ export const miniTrucks = [
   {
     id: "submit_button",
     type: "submit",
+    className: "submit",
   },
   { ...FILTER_ACTIONS, href: "/mini-trucks/more-filters" },
   ,
@@ -166,31 +176,15 @@ export const otherVehicles = [
   YEAR,
   MILEAGE,
   {
-    id: "pricing_other_vehicles",
-    label: "Preisangabe",
-    type: "radio",
-    radioList: [
-      {
-        id: "pricing_other_vehicles_brutto",
-        name: "pricing",
-        value: "brutto",
-        label: "Brutto",
-        type: "radio",
-      },
-      {
-        id: "pricing_other_vehicles_netto",
-        name: "pricing",
-        value: "netto",
-        label: "Netto",
-        type: "radio",
-      },
-    ],
+    id: "pricing",
+    type: "pricingRadio",
   },
   PRICE,
   LOCATION,
   {
     id: "submit_button",
     type: "submit",
+    className: "submit",
   },
   { ...FILTER_ACTIONS, href: "/motorcycle/more-filters" },
 ];
