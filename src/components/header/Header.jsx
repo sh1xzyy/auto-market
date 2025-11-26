@@ -1,7 +1,6 @@
 "use client";
 
 import { useWindowWidth } from "@/shared/hooks/useWindowWidth";
-import { Logo } from "./ui/Logo/Logo";
 import { DefaultLink } from "@/shared/ui/Link/DefaultLink";
 import { routes } from "@/shared/constants/routes";
 import { IconButton } from "@/shared/ui/IconButton/IconButton";
@@ -10,6 +9,7 @@ import { FaRegBell } from "react-icons/fa";
 import { usePathname } from "next/navigation";
 import { MainNavigationList } from "./ui/MainNavigationList/MainNavigationList";
 import { UserNavigationList } from "./ui/UserNavigationList/UserNavigationList";
+import { Logo } from "@/shared/ui/Logo/Logo";
 
 export const Header = () => {
   const { windowWidth } = useWindowWidth();
