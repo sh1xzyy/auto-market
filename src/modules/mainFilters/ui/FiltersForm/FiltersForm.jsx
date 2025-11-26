@@ -15,6 +15,7 @@ import {
   VAN_FORM_VALUES,
 } from "../../constants/formValues";
 import { Checkbox } from "@/shared/ui/Checkbox/Checkbox";
+import { PricingRadio } from "@/shared/ui/PricingRadio/PricingRadio";
 
 const FiltersForm = ({ openIndex, vehiclesFields }) => {
   const getDefaultValues = () => {
@@ -49,14 +50,11 @@ const FiltersForm = ({ openIndex, vehiclesFields }) => {
   return (
     <FormProvider {...methods}>
       <form
-        className="grid grid-cols-2 gap-[18px] w-full items-center bg-background-light-black p-[18px] sm:grid-cols-[156px_1fr_1fr_1fr] md:grid-cols-4 lg:rounded-br-2xl lg:rounded-tr-2xl"
+        className="grid grid-cols-2 gap-4 w-full items-center bg-background-light-black p-[18px] sm:grid-cols-4 lg:rounded-br-2xl lg:rounded-tr-2xl"
         onSubmit={handleSubmit(onSubmit)}
       >
         {vehiclesFields[openIndex !== 4 ? openIndex : 5].map((item) => (
-          <div
-            className={clsx(typeToClass[item?.type] || typeToClass[item?.id])}
-            key={item?.id}
-          >
+          <div className={clsx(typeToClass[item?.className])} key={item?.id}>
             {item?.type === "selector" && <Selector item={item} />}
 
             {item?.type === "checkbox" && (
@@ -66,6 +64,14 @@ const FiltersForm = ({ openIndex, vehiclesFields }) => {
                 render={({ field }) => (
                   <Checkbox {...field} Icon={item?.icon} text={item?.label} />
                 )}
+              />
+            )}
+
+            {item?.type === "pricingRadio" && (
+              <Controller
+                name="pricing_method"
+                control={control}
+                render={({ field }) => <PricingRadio {...field} />}
               />
             )}
 
