@@ -90,7 +90,7 @@ const FiltersForm = ({ openIndex, vehiclesFields }) => {
             )}
 
             {item?.type === "submit" && (
-              <div className="lg:mb-1">
+              <div className="sm:mb-1">
                 <Button
                   variant="primary"
                   text="1.457.429 Angebote"
