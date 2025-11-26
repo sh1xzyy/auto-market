@@ -198,51 +198,55 @@ export const otherVehicles = [
 export const other = [
   {
     ...ICON_BUTTON,
+    id: "lkw",
     label: "Lkw über 7,5 t",
     icon: <PiTruck color="var(--color-light-orange)" size={45} />,
   },
   {
     ...ICON_BUTTON,
+    id: "trailer",
     label: "Anhänger",
     icon: <FaTrailer color="var(--color-light-orange)" size={45} />,
   },
   {
     ...ICON_BUTTON,
+    id: "transporter",
     label: "Transporter bis 7,5 t",
     icon: <HiMiniTruck color="var(--color-light-orange)" size={45} />,
   },
   {
     ...ICON_BUTTON,
+    id: "semi-trailer_1",
     label: "Sattelzüge",
     icon: <FaTruckMoving color="var(--color-light-orange)" size={45} />,
   },
   {
     ...ICON_BUTTON,
+    id: "semi-trailer_2",
     label: "Auflieger",
     icon: <FaTrailer color="var(--color-light-orange)" size={45} />,
   },
   {
     ...ICON_BUTTON,
-    label: "Sattelzüge",
-    icon: <FaBus color="var(--color-light-orange)" size={45} />,
-  },
-  {
-    ...ICON_BUTTON,
+    id: "Buses",
     label: "Busse",
     icon: <FaTruckMoving color="var(--color-light-orange)" size={45} />,
   },
   {
     ...ICON_BUTTON,
+    id: "agricultural",
     label: "Agrar",
     icon: <FaTractor color="var(--color-light-orange)" size={45} />,
   },
   {
     ...ICON_BUTTON,
+    id: "construction_machinery",
     label: "Baumaschinen",
     icon: <IoIosConstruct color="var(--color-light-orange)" size={45} />,
   },
   {
     ...ICON_BUTTON,
+    id: "stacker",
     label: "Stapler",
     icon: <MdFrontLoader color="var(--color-light-orange)" size={45} />,
   },

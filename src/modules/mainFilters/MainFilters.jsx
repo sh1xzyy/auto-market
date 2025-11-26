@@ -11,6 +11,7 @@ import {
   passengerCar,
 } from "./data/formFields";
 import FiltersForm from "./ui/FiltersForm/FiltersForm";
+import { OtherVehiclesList } from "./ui/OtherVehiclesList/OtherVehiclesList";
 
 export const MainFilters = () => {
   const [openIndex, setOpenIndex] = useState(0);
@@ -36,6 +37,13 @@ export const MainFilters = () => {
 
         {(isOtherFiltersOpen || openIndex !== vehiclesFields.length - 2) && (
           <FiltersForm vehiclesFields={vehiclesFields} openIndex={openIndex} />
+        )}
+
+        {openIndex === 4 && !isOtherFiltersOpen && (
+          <OtherVehiclesList
+            list={vehiclesFields[4]}
+            setIsOtherFiltersOpen={setIsOtherFiltersOpen}
+          />
         )}
       </div>
     </div>

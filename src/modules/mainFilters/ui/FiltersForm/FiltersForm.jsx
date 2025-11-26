@@ -31,12 +31,12 @@ const FiltersForm = ({ openIndex, vehiclesFields }) => {
         return {};
     }
   };
+  const defaultValues = getDefaultValues();
 
   const methods = useForm({
-    defaultValues: getDefaultValues(),
+    defaultValues,
   });
-
-  const { control, handleSubmit } = methods;
+  const { control, reset, handleSubmit } = methods;
 
   const onSubmit = async (values) => {
     try {
@@ -87,7 +87,9 @@ const FiltersForm = ({ openIndex, vehiclesFields }) => {
               </div>
             )}
 
-            {item?.type === "filterActions" && <FilterActions item={item} />}
+            {item?.type === "filterActions" && (
+              <FilterActions item={item} reset={reset} />
+            )}
           </div>
         ))}
       </form>
