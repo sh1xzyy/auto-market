@@ -55,7 +55,13 @@ const FiltersForm = ({ openIndex, vehiclesFields }) => {
       >
         {vehiclesFields[openIndex !== 4 ? openIndex : 5].map((item) => (
           <div className={clsx(typeToClass[item?.className])} key={item?.id}>
-            {item?.type === "selector" && <Selector item={item} />}
+            {item?.type === "selector" && (
+              <Controller
+                name={item?.name}
+                control={control}
+                render={({ field }) => <Selector {...field} item={item} />}
+              />
+            )}
 
             {item?.type === "checkbox" && (
               <Controller

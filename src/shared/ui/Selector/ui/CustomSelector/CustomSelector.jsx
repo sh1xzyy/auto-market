@@ -41,14 +41,17 @@ const customStyles = {
 };
 
 export const CustomSelector = ({
+  ref,
   name,
   id,
   placeholder,
   options = groupedOptions,
   settings,
+  ...props
 }) => {
   return (
     <Select
+      ref={ref}
       options={options}
       styles={customStyles}
       name={name}
@@ -56,6 +59,7 @@ export const CustomSelector = ({
       instanceId={id}
       placeholder={placeholder}
       {...settings}
+      {...props}
     />
   );
 };

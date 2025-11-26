@@ -1,7 +1,8 @@
+import { forwardRef } from "react";
 import { IconButton } from "../IconButton/IconButton";
 import { CustomSelector } from "./ui/CustomSelector/CustomSelector";
 
-export const Selector = ({ item }) => {
+export const Selector = forwardRef(({ item, ...props }, ref) => {
   return (
     <>
       <label
@@ -18,7 +19,15 @@ export const Selector = ({ item }) => {
           />
         )}
       </label>
-      <CustomSelector name={item?.name} id={item?.id} placeholder="Beliebig" />
+      <CustomSelector
+        ref={ref}
+        name={item?.name}
+        id={item?.id}
+        placeholder="Beliebig"
+        {...props}
+      />
     </>
   );
-};
+});
+
+Selector.displayName = "Selector";

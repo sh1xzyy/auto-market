@@ -3,12 +3,14 @@ import { forwardRef } from "react";
 
 const radioList = [
   {
+    id: "brutto",
     name: "pricing",
     value: "brutto",
     label: "Brutto",
     type: "radio",
   },
   {
+    id: "netto",
     name: "pricing",
     value: "netto",
     label: "Netto",
