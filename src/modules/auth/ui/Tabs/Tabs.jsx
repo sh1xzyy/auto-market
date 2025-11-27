@@ -1,3 +1,5 @@
+"use client";
+
 import clsx from "clsx";
 
 export const Tabs = ({ activeIndex, setActiveIndex }) => {

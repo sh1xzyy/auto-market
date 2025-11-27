@@ -5,9 +5,27 @@ import { Tabs } from "../ui/Tabs/Tabs";
 
 export const AuthLayout = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+
+  const renderTitle = () => {
+    switch (activeIndex) {
+      case 0:
+        return "Hallo! Willkommen zurück!";
+      case 1:
+        return "Erstelle Dein mobile.de Konto!";
+      default:
+        break;
+    }
+  };
+
   return (
     <div className="md:grid md:grid-cols-2 md:gap-[18px]">
-      <Tabs activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
+      <div className="mb-[27px] bg-background-light-black border border-grey md:rounded-lg md:border md:border-grey">
+        <Tabs activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
+
+        <div className="px-[18px] py-[27px] md:p-9">
+          <h2 className="mb-[18px] text-xl font-extrabold">{renderTitle()}</h2>
+        </div>
+      </div>
     </div>
   );
 };
