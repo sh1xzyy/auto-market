@@ -48,7 +48,7 @@ export const Header = () => {
                   {windowWidth >= 1014 && (
                     <DefaultLink
                       variant="primary"
-                      href={routes.auth.login}
+                      href={routes.auth.base}
                       text="Anmelden"
                     />
                   )}

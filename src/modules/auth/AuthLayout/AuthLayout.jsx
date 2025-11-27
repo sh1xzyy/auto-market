@@ -8,6 +8,7 @@ import { LoginForm } from "../components/LoginForm/LoginForm";
 import Link from "next/link";
 import { routes } from "@/shared/constants/routes";
 import { Benefits } from "../ui/Benefits/Benefits";
+import { RegisterForm } from "../components/RegisterForm/RegisterForm";
 
 export const AuthLayout = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -27,6 +28,8 @@ export const AuthLayout = () => {
     switch (activeIndex) {
       case 0:
         return <LoginForm />;
+      case 1:
+        return <RegisterForm />;
     }
   };
 
