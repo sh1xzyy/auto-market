@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { Tabs } from "../ui/Tabs/Tabs";
+import OAuthActions from "../ui/OAuthActions/OAuthActions";
+import { Divider } from "../ui/Divider/Divider";
 
 export const AuthLayout = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -25,6 +27,9 @@ export const AuthLayout = () => {
         <div className="px-[18px] py-[27px] md:p-9">
           <h2 className="mb-[18px] text-xl font-extrabold">{renderTitle()}</h2>
         </div>
+
+        <OAuthActions activeIndex={activeIndex} />
+        <Divider />
       </div>
     </div>
   );
