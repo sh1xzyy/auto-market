@@ -7,6 +7,7 @@ import { Divider } from "../ui/Divider/Divider";
 import { LoginForm } from "../components/LoginForm/LoginForm";
 import Link from "next/link";
 import { routes } from "@/shared/constants/routes";
+import { Benefits } from "../ui/Benefits/Benefits";
 
 export const AuthLayout = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -65,6 +66,8 @@ export const AuthLayout = () => {
           </Link>
         </div>
       </div>
+
+      <Benefits />
     </div>
   );
 };
