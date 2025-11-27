@@ -4,7 +4,6 @@ export const IconButton = ({
   icon: Icon,
   size = 20,
   className = "",
-  iconClassName = "group-hover:fill-light-white",
   children,
   ...props
 }) => {
@@ -15,10 +14,9 @@ export const IconButton = ({
       {...props}
     >
       <Icon
-        className={clsx(
-          "fill-light-grey transition-colors duration-300",
-          iconClassName
-        )}
+        className={
+          "fill-light-grey transition-colors duration-300 group-hover:fill-light-white"
+        }
         size={size}
       />
       {children}
