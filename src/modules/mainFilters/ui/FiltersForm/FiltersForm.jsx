@@ -68,7 +68,12 @@ const FiltersForm = ({ openIndex, vehiclesFields }) => {
                 name="isElectro"
                 control={control}
                 render={({ field }) => (
-                  <Checkbox {...field} Icon={item?.icon} text={item?.label} />
+                  <Checkbox
+                    {...field}
+                    Icon={item?.icon}
+                    text={item?.label}
+                    variant="primary"
+                  />
                 )}
               />
             )}

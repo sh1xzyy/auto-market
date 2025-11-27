@@ -1,4 +1,10 @@
 export const routes = {
-  auth: "/auth",
+  home: "/",
+  auth: {
+    base: "/auth",
+    login: "/login",
+    register: "/register",
+    password_recovery: "/password_recovery",
+  },
   mobee: "/mobee",
 };

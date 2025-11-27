@@ -4,9 +4,11 @@ import React from "react";
 export const Button = ({ variant, text, Icon, ...props }) => {
   const variants = {
     primary:
-      "h-[36px] text-light-white bg-light-orange rounded-md transition-colors linear duration-300 hover:bg-dark-orange",
+      "h-[44px] text-light-white bg-light-orange rounded-md transition-colors linear duration-300 hover:bg-dark-orange font-bold text-md",
+    primary_big:
+      "w-full h-[52px] px-[24px] bg-light-orange rounded-md font-bold sm:px-[16px] sm:py-[12px] sm:h-[44px] sm:text-md transition-colors linear duration-300 hover:bg-dark-orange",
     secondary:
-      "rounded-md border border-super-light-violet text-super-light-violet h-[44px] transition-colors linear duration-300 hover:border-light-violet hover:text-light-violet",
+      "rounded-md border border-super-light-violet text-super-light-violet h-[44px] transition-colors linear duration-300 hover:border-light-violet hover:text-light-violet font-bold text-md",
   };
 
   return (
@@ -18,7 +20,7 @@ export const Button = ({ variant, text, Icon, ...props }) => {
       {...props}
     >
       {Icon && Icon}
-      <span className="font-bold text-md">{text}</span>
+      <span>{text}</span>
     </button>
   );
 };

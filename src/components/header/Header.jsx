@@ -14,7 +14,7 @@ import { Logo } from "@/shared/ui/Logo/Logo";
 export const Header = () => {
   const { windowWidth } = useWindowWidth();
   const pathname = usePathname();
-  const isPathAuth = pathname === routes.auth;
+  const isPathAuth = pathname === routes.auth.base;
 
   return (
     <>
@@ -48,7 +48,7 @@ export const Header = () => {
                   {windowWidth >= 1014 && (
                     <DefaultLink
                       variant="primary"
-                      href={routes.auth}
+                      href={routes.auth.base}
                       text="Anmelden"
                     />
                   )}
