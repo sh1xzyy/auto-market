@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Tabs } from "../ui/Tabs/Tabs";
 import OAuthActions from "../ui/OAuthActions/OAuthActions";
 import { Divider } from "../ui/Divider/Divider";
+import { LoginForm } from "../components/LoginForm/LoginForm";
 
 export const AuthLayout = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -22,7 +23,7 @@ export const AuthLayout = () => {
   const renderForm = () => {
     switch (activeIndex) {
       case 0:
-        return;
+        return <LoginForm />;
     }
   };
 
@@ -36,6 +37,8 @@ export const AuthLayout = () => {
 
           <OAuthActions activeIndex={activeIndex} />
           <Divider />
+
+          {renderForm()}
         </div>
       </div>
     </div>

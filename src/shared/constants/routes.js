@@ -1,4 +1,7 @@
 export const routes = {
-  auth: "/auth",
+  auth: {
+    base: "/auth",
+    password_recovery: "/password_recovery",
+  },
   mobee: "/mobee",
 };
