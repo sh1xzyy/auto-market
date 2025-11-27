@@ -14,12 +14,12 @@ const OAuthActions = ({ activeIndex }) => {
     {
       Icon: <FcGoogle size={18} />,
       text: `Mit Google ${endOfTextByIndex}`,
-      onClick: () => console.log(this.text),
+      onClick: () => console.log("google"),
     },
     {
       Icon: <DiApple color="var(--color-light-white)" size={18} />,
       text: `Mit Apple ${endOfTextByIndex}`,
-      onClick: () => console.log(this.text),
+      onClick: () => console.log("apple"),
     },
   ];
 
