@@ -6,7 +6,12 @@ import Link from "next/link";
 import { Controller, useForm } from "react-hook-form";
 
 export const LoginForm = () => {
-  const { handleSubmit, control } = useForm();
+  const { handleSubmit, control } = useForm({
+    defaultValues: {
+      email: "",
+      password: "",
+    },
+  });
 
   const onSubmit = async (values) => {
     try {

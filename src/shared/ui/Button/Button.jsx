@@ -4,7 +4,7 @@ import React from "react";
 export const Button = ({ variant, text, Icon, ...props }) => {
   const variants = {
     primary:
-      "text-light-white bg-light-orange rounded-md transition-colors linear duration-300 hover:bg-dark-orange font-bold text-md",
+      "h-[44px] text-light-white bg-light-orange rounded-md transition-colors linear duration-300 hover:bg-dark-orange font-bold text-md",
     primary_big:
       "w-full h-[52px] px-[24px] bg-light-orange rounded-md font-bold sm:px-[16px] sm:py-[12px] sm:h-[44px] sm:text-md transition-colors linear duration-300 hover:bg-dark-orange",
     secondary:

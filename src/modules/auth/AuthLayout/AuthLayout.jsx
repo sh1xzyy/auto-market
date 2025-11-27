@@ -9,6 +9,7 @@ import Link from "next/link";
 import { routes } from "@/shared/constants/routes";
 import { Benefits } from "../ui/Benefits/Benefits";
 import { RegisterForm } from "../components/RegisterForm/RegisterForm";
+import { DefaultLink } from "@/shared/ui/Link/DefaultLink";
 
 export const AuthLayout = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -61,12 +62,11 @@ export const AuthLayout = () => {
         </div>
         <div className="text-md font-bold text-center">
           <span>Sind Sie Händler?&nbsp;</span>
-          <Link
-            className="text-light-orange underline"
+          <DefaultLink
+            variant="text"
+            text={renderLinkText()}
             href={routes.auth.register}
-          >
-            {renderLinkText()}
-          </Link>
+          />
         </div>
       </div>
 
