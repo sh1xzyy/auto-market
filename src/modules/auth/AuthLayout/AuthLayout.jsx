@@ -19,6 +19,13 @@ export const AuthLayout = () => {
     }
   };
 
+  const renderForm = () => {
+    switch (activeIndex) {
+      case 0:
+        return;
+    }
+  };
+
   return (
     <div className="md:grid md:grid-cols-2 md:gap-[18px]">
       <div className="mb-[27px] bg-background-light-black border border-grey md:rounded-lg md:border md:border-grey">
@@ -26,10 +33,10 @@ export const AuthLayout = () => {
 
         <div className="px-[18px] py-[27px] md:p-9">
           <h2 className="mb-[18px] text-xl font-extrabold">{renderTitle()}</h2>
-        </div>
 
-        <OAuthActions activeIndex={activeIndex} />
-        <Divider />
+          <OAuthActions activeIndex={activeIndex} />
+          <Divider />
+        </div>
       </div>
     </div>
   );

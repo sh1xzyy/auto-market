@@ -5,7 +5,7 @@ import { FcGoogle } from "react-icons/fc";
 
 const OAuthActions = ({ activeIndex }) => {
   const buttonClass = {
-    base: "flex items-center justify-center gap-2sm py-2lg px-xl border-2 border-super-light-violet h-[56px] rounded-md text-super-violet sm:px-lg sm:py-2md sm:h-[44px] transition-colors linear duration-300 hover:border-light-violet",
+    base: "flex items-center justify-center gap-[7px] py-[18px] px-[24px] border-2 border-super-light-violet h-[56px] rounded-md text-super-violet sm:px-lg sm:py-[12px] sm:h-[44px] transition-colors linear duration-300 hover:border-light-violet",
   };
 
   const endOfTextByIndex = activeIndex === 0 ? "anmelden" : "registrieren";
@@ -24,7 +24,7 @@ const OAuthActions = ({ activeIndex }) => {
   ];
 
   return (
-    <div className="flex flex-col gap-md mb-md">
+    <div className="flex flex-col gap-[9px] mb-[9px]">
       {buttons.map(({ Icon, text, onClick }, i) => (
         <button
           className={buttonClass["base"]}
