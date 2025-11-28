@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { useForm } from "react-hook-form";
 import { RiResetLeftFill } from "react-icons/ri";
 import { VscSettings } from "react-icons/vsc";
 

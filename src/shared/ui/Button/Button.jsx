@@ -1,14 +1,21 @@
 import clsx from "clsx";
 import React from "react";
 
-export const Button = ({ variant, text, Icon, ...props }) => {
+export const Button = ({
+  variant,
+  text,
+  Icon,
+  condition,
+  children,
+  ...props
+}) => {
+  const transitionStyles = "transition-colors linear duration-300";
+
   const variants = {
-    primary:
-      "h-[44px] text-light-white bg-light-orange rounded-md transition-colors linear duration-300 hover:bg-dark-orange font-bold text-md",
-    primary_big:
-      "w-full h-[52px] px-[24px] bg-light-orange rounded-md font-bold sm:px-[16px] sm:py-[12px] sm:h-[44px] sm:text-md transition-colors linear duration-300 hover:bg-dark-orange",
-    secondary:
-      "rounded-md border border-super-light-violet text-super-light-violet h-[44px] transition-colors linear duration-300 hover:border-light-violet hover:text-light-violet font-bold text-md",
+    primary: `h-[44px] text-light-white bg-light-orange rounded-md ${transitionStyles}hover:bg-dark-orange font-bold text-md`,
+    primary_big: `w-full h-[52px] px-[24px] bg-light-orange rounded-md font-bold sm:px-[16px] sm:py-[12px] sm:h-[44px] sm:text-md ${transitionStyles}hover:bg-dark-orange`,
+    secondary: `rounded-md border border-super-light-violet text-super-light-violet h-[44px] ${transitionStyles}hover:border-light-violet hover:text-light-violet font-bold text-md`,
+    tag: `flex items-center justify-center w-full h-9 px-3 py-2 rounded-xs ${transitionStyles} ${condition}`,
   };
 
   return (
@@ -17,10 +24,12 @@ export const Button = ({ variant, text, Icon, ...props }) => {
         "flex items-center justify-center w-full gap-2",
         variants[variant]
       )}
+      type={props.type ? "button" : "submit"}
       {...props}
     >
       {Icon && Icon}
       <span>{text}</span>
+      {children}
     </button>
   );
 };
