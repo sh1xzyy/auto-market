@@ -6,6 +6,7 @@ import { useWindowWidth } from "@/shared/hooks/useWindowWidth";
 import { CustomSwiper } from "@/shared/ui/CustomSwiper/CustomSwiper";
 import { SpecialOfferCard } from "../SpecialOfferCard/SpecialOfferCard";
 import { cars } from "../../temporary/cars";
+import VehicleCard from "@/shared/ui/VehicleCard/VehicleCard";
 
 export const Deals = ({ openIndex }) => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -32,11 +33,11 @@ export const Deals = ({ openIndex }) => {
     >
       {cars[openIndex].list?.map((item, i) => (
         <SwiperSlide key={i}>
-          {
-            i === 0 ? <SpecialOfferCard item={item} /> : null
-
-            // <VehicleCard item={item} />
-          }
+          {i === 0 ? (
+            <SpecialOfferCard item={item} />
+          ) : (
+            <VehicleCard item={item} />
+          )}
         </SwiperSlide>
       ))}
     </CustomSwiper>
