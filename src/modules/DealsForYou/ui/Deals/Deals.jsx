@@ -28,8 +28,8 @@ export const Deals = ({ openIndex }) => {
           },
         },
       }}
-      showButtonsCondition={isDesktop}
-      showPrevButtonCondition={activeIndex > 0}
+      showButtons={isDesktop}
+      showPrevButton={activeIndex > 0}
     >
       {cars[openIndex].list?.map((item, i) => (
         <SwiperSlide key={i}>
