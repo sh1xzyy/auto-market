@@ -1,6 +1,8 @@
 "use client";
 
 import { IconButton } from "@/shared/ui/IconButton/IconButton";
+import clsx from "clsx";
+import { IoIosArrowDown } from "react-icons/io";
 import { useSwiper } from "swiper/react";
 
 export const ActionButton = ({ type }) => {

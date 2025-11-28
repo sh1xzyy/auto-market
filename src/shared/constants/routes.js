@@ -6,5 +6,6 @@ export const routes = {
     register: "/register",
     password_recovery: "/password_recovery",
   },
+  hotDeals: "/hot-deals",
   mobee: "/mobee",
 };

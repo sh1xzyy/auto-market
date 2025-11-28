@@ -3,6 +3,7 @@
 import { ContentCard } from "@/shared/ui/ContentCard/ContentCard";
 import { useState } from "react";
 import { Tabs } from "./ui/Tabs/Tabs";
+import { Deals } from "./ui/Deals/Deals";
 
 export const DealsForYou = () => {
   const [openIndex, setOpenIndex] = useState(0);
@@ -14,6 +15,7 @@ export const DealsForYou = () => {
           Deals für Dich
         </h2>
         <Tabs openIndex={openIndex} setOpenIndex={setOpenIndex} />
+        <Deals openIndex={openIndex} />
       </ContentCard>
     </div>
   );
