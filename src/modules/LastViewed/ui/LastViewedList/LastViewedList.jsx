@@ -1,13 +1,13 @@
 "use client";
 
-import { useState } from "react";
-import { PARKED_VEHICLES } from "../../temporary/parkedVehicles";
 import { SwiperSlide } from "swiper/react";
-import VehicleCard from "@/shared/ui/VehicleCard/VehicleCard";
+import { useState } from "react";
+import { LAST_VIEWED } from "../../temporary/lastViewed";
 import { CustomSwiper } from "@/shared/ui/CustomSwiper/CustomSwiper";
+import VehicleCard from "@/shared/ui/VehicleCard/VehicleCard";
 import { useWindowWidth } from "@/shared/hooks/useWindowWidth";
 
-export const Vehicles = () => {
+export const LastViewedList = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const { windowWidth } = useWindowWidth();
 
@@ -29,7 +29,7 @@ export const Vehicles = () => {
       showButtons={windowWidth >= 1014}
       showPrevButton={activeIndex > 0}
     >
-      {PARKED_VEHICLES?.map((item, i) => (
+      {LAST_VIEWED?.map((item, i) => (
         <SwiperSlide key={i}>
           <VehicleCard item={item} />
         </SwiperSlide>

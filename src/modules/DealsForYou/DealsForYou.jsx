@@ -11,7 +11,7 @@ export const DealsForYou = () => {
   return (
     <div className="container">
       <ContentCard variant="primary">
-        <h2 className={"font-extrabold leading-8 mb-4 text-xl"}>
+        <h2 className="font-extrabold leading-8 mb-4 text-xl">
           Deals für Dich
         </h2>
         <Tabs openIndex={openIndex} setOpenIndex={setOpenIndex} />
