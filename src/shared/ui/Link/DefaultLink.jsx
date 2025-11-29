@@ -8,7 +8,8 @@ export const DefaultLink = ({ variant, href, Icon, text, ...props }) => {
     primary: `${centeredStyles} gap-2 h-[36px] px-[12px] font-bold rounded-md text-[14px] bg-light-violet ${transitionStyles} hover:bg-dark-violet`,
     primary_big: `${centeredStyles} bg-light-violet rounded-md h-9 px-3 ${transitionStyles} md:max-w-[231px] hover:bg-dark-violet`,
     secondary: `${centeredStyles} gap-2 rounded-md h-[44px] text-[16px] bg-light-orange ${transitionStyles} hover:bg-dark-orange`,
-    text: "text-light-orange underline",
+    textPrimary: "text-light-orange underline",
+    textNormal: `text-md font-bold underline ${transitionStyles} hover:text-light-white`,
     default: "group block p-[9px]",
   };
 

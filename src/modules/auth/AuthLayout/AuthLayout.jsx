@@ -63,7 +63,7 @@ export const AuthLayout = () => {
         <div className="text-md font-bold text-center">
           <span>Sind Sie Händler?&nbsp;</span>
           <DefaultLink
-            variant="text"
+            variant="textPrimary"
             text={renderLinkText()}
             href={routes.auth.register}
           />

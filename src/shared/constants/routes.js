@@ -8,4 +8,5 @@ export const routes = {
   },
   hotDeals: "/hot-deals",
   mobee: "/mobee",
+  park: "/park",
 };
