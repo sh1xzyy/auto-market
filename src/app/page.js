@@ -2,6 +2,7 @@ import { AIHelperIntro } from "@/modules/AIHelperIntro";
 import { DealsForYou } from "@/modules/DealsForYou";
 import { MainFilters } from "@/modules/mainFilters";
 import { MainImage } from "@/modules/mainImage";
+import { ParkedVehicles } from "@/modules/ParkedVehicles";
 
 export default function Home() {
   return (
@@ -18,6 +19,10 @@ export default function Home() {
 
       <section className="py-[7px]">
         <DealsForYou />
+      </section>
+
+      <section className="py-[7px]">
+        <ParkedVehicles />
       </section>
     </div>
   );

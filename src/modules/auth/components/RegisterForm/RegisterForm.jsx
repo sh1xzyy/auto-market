@@ -59,7 +59,7 @@ export const RegisterForm = () => {
                 E-Mail-Werbung von mobile.de (einschließlich E-Mail-Analyse) zu,
                 wie in der{" "}
                 <DefaultLink
-                  variant="text"
+                  variant="textPrimary"
                   text="Einwilligungserklärungnäher"
                   href={routes.home}
                 />
@@ -72,11 +72,11 @@ export const RegisterForm = () => {
         <div className="mb-[18px]">
           <p className="text-md font-bold leading-5">
             Es gelten die mobile.de&nbsp;
-            <DefaultLink variant="text" text="AGB" href={routes.home} />
+            <DefaultLink variant="textPrimary" text="AGB" href={routes.home} />
             &nbsp;. Informationen zur Verarbeitung aller Daten werden in der
             mobile.de&nbsp;
             <DefaultLink
-              variant="text"
+              variant="textPrimary"
               text="Datenschutzerklärung"
               href={routes.home}
             />

@@ -13,7 +13,7 @@ export const VehicleCard = ({ item }) => {
         icon={RiParkingBoxLine}
         iconClassName="var(--color-super-light-violet)"
         size={16}
-        className="absolute flex items-center justify-center top-2sm right-2sm w-8 h-8 bg-black rounded-[50%]"
+        className="absolute flex items-center justify-center top-[7px] right-[7px] w-8 h-8 bg-black rounded-[50%]"
         onClick={() => console.log("added to favorite")}
       />
       <Link href="/vehicles/details">
