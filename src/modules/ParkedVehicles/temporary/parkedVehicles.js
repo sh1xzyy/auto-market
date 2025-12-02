@@ -177,7 +177,7 @@ export const PARKED_VEHICLES = [
   {
     title: "Opel Cors",
     image:
-      "https://img.classistatic.de/api/v1/mo-prod/images/dc/dc2ba2ba-d12a-4607-b34a-77f6c3aa88ee?rule=mo-360",
+      "https://img.classistatic.de/api/v1/mo-prod/images/df/df38e1b6-fb3b-4d26-9e99-8b276e7cfbba?rule=mo-360w",
     discountedPrice: "28.700",
     fairPrice: 5,
     grossPrice: "17.950",
@@ -201,7 +201,7 @@ export const PARKED_VEHICLES = [
   {
     title: "Opel Cors",
     image:
-      "https://img.classistatic.de/api/v1/mo-prod/images/23/23f8e733-248b-4544-b73f-4d5adf51dc6b?rule=mo-360",
+      "https://img.classistatic.de/api/v1/mo-prod/images/0c/0ca75126-6864-47d7-b74f-bbcc71870af7?rule=mo-360w",
 
     discountedPrice: "28.700",
     fairPrice: 5,
@@ -251,7 +251,7 @@ export const PARKED_VEHICLES = [
   {
     title: "Opel Cors",
     image:
-      "https://img.classistatic.de/api/v1/mo-prod/images/d4/d4f31ea8-e7cc-401f-8a3c-e9fed9d35bcc?rule=mo-360",
+      "https://img.classistatic.de/api/v1/mo-prod/images/ae/ae88bb95-46f2-405d-b436-657c226397de?rule=mo-360",
 
     discountedPrice: "28.700",
     fairPrice: 5,
@@ -277,7 +277,7 @@ export const PARKED_VEHICLES = [
   {
     title: "Opel Cors",
     image:
-      "https://img.classistatic.de/api/v1/mo-prod/images/cb/cb2d6130-6127-4eec-b277-f81e6547ae39?rule=mo-360",
+      "https://img.classistatic.de/api/v1/mo-prod/images/33/33d7829a-f2ab-456a-8200-3c719aef3ffc?rule=mo-360",
     discountedPrice: "28.700",
     fairPrice: 5,
     grossPrice: "17.950",

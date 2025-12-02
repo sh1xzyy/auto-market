@@ -5,6 +5,7 @@ import { MainFilters } from "@/modules/mainFilters";
 import { MainImage } from "@/modules/mainImage";
 import { ParkedVehicles } from "@/modules/ParkedVehicles";
 import { PopularBrands } from "@/modules/PopularBrands";
+import { PopularBrandsAndMore } from "@/modules/PopularBrandsAndMore";
 import { SelectedCategories } from "@/modules/SelectedCategories";
 
 export default function Home() {
@@ -38,6 +39,10 @@ export default function Home() {
 
       <section className="py-[7px]">
         <PopularBrands />
+      </section>
+
+      <section className="py-[7px]">
+        <PopularBrandsAndMore />
       </section>
     </div>
   );
