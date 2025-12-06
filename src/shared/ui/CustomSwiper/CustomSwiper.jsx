@@ -14,6 +14,7 @@ export const CustomSwiper = ({
 }) => {
   const variants = {
     primary: "mb-2 lg:mb-4",
+    rounded: "sm:max-w-[640px] lg:rounded-lg",
   };
 
   return (
