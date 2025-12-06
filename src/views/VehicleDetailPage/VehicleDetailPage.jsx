@@ -3,7 +3,7 @@
 import { CompanyBanner } from "@/modules/CompanyBanner/CompanyBanner";
 import { useWindowWidth } from "@/shared/hooks/useWindowWidth";
 import { vehicleData } from "./temporary/vehicleData";
-import { ImageSwiper } from "@/modules/ImageSwiper/ImageSwiper";
+import { VehicleImageSwiper } from "@/modules/VehicleImageSwiper/VehicleImageSwiper";
 
 const VehicleDetailPage = () => {
   const { windowWidth } = useWindowWidth();
@@ -17,7 +17,7 @@ const VehicleDetailPage = () => {
         <div className="flex flex-col lg:flex-row lg:gap-[18px]">
           <div>
             <section className="lg:mb-4">
-              <ImageSwiper imageData={{ name, images }} />
+              <VehicleImageSwiper imageData={{ name, images }} />
             </section>
           </div>
         </div>
