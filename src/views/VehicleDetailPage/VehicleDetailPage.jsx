@@ -8,10 +8,11 @@ import { VehicleSpecsSummary } from "@/modules/VehicleSpecsSummary";
 import { VehicleTechnicalDetails } from "@/modules/VehicleTechnicalDetails";
 import { VehicleImageSwiper } from "@/modules/VehicleImageSwiper";
 import { CompanyBanner } from "@/modules/CompanyBanner";
+import { VehicleEquipment } from "@/modules/VehicleEquipment";
 
 const VehicleDetailPage = () => {
   const { windowWidth } = useWindowWidth();
-  const { company, name, images, technical_details } = vehicleData;
+  const { company, name, images, technical_details, equipment } = vehicleData;
 
   return (
     <div className="lg:py-2">
@@ -37,6 +38,10 @@ const VehicleDetailPage = () => {
 
             <section className="mb-4">
               <VehicleTechnicalDetails technicalDetails={technical_details} />
+            </section>
+
+            <section className="mb-4">
+              <VehicleEquipment equipment={equipment} />
             </section>
           </div>
 
