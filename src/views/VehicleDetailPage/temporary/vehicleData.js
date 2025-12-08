@@ -26,7 +26,7 @@ export const vehicleData = {
     { key: "initialRegistration", value: "04/2020" },
     { key: "vehicleOwner", value: 1 },
   ],
-  technicalDetails: [
+  technical_details: [
     { key: "condition", value: "Gebrauchtfahrzeug, Unfallfrei" },
     { key: "category", value: "Limousine" },
     { key: "series", value: "A3 Limousine (8VM)(04.2016->)" },

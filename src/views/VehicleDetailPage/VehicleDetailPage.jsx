@@ -1,16 +1,17 @@
 "use client";
 
-import { CompanyBanner } from "@/modules/CompanyBanner/CompanyBanner";
 import { useWindowWidth } from "@/shared/hooks/useWindowWidth";
 import { vehicleData } from "./temporary/vehicleData";
-import { VehicleImageSwiper } from "@/modules/VehicleImageSwiper/VehicleImageSwiper";
 import { VehicleOverview } from "@/modules/VehicleOverview";
 import { GoBackButton } from "@/shared/ui/GoBackButton/GoBackButton";
 import { VehicleSpecsSummary } from "@/modules/VehicleSpecsSummary";
+import { VehicleTechnicalDetails } from "@/modules/VehicleTechnicalDetails";
+import { VehicleImageSwiper } from "@/modules/VehicleImageSwiper";
+import { CompanyBanner } from "@/modules/CompanyBanner";
 
 const VehicleDetailPage = () => {
   const { windowWidth } = useWindowWidth();
-  const { company, name, images } = vehicleData;
+  const { company, name, images, technical_details } = vehicleData;
 
   return (
     <div className="lg:py-2">
@@ -32,6 +33,10 @@ const VehicleDetailPage = () => {
 
             <section className="mb-4">
               <VehicleSpecsSummary />
+            </section>
+
+            <section className="mb-4">
+              <VehicleTechnicalDetails technicalDetails={technical_details} />
             </section>
           </div>
 
