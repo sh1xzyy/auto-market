@@ -10,14 +10,22 @@ import { usePathname } from "next/navigation";
 import { MainNavigationList } from "./ui/MainNavigationList/MainNavigationList";
 import { UserNavigationList } from "./ui/UserNavigationList/UserNavigationList";
 import { Logo } from "@/shared/ui/Logo/Logo";
+import { useState } from "react";
+import { BurgerMenu } from "./ui/BurgerMenu/BurgerMenu";
 
 export const Header = () => {
+  const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false)
   const { windowWidth } = useWindowWidth();
   const pathname = usePathname();
   const isPathAuth = pathname === routes.auth.base;
 
+  console.log(isBurgerMenuOpen)
+
   return (
     <>
+      {/* {isBurgerMenuOpen && !isPathAuth && (
+				<BurgerMenu setIsBurgerMenuOpen={setIsBurgerMenuOpen} />
+			)} */}
       <div className="flex items-center h-[72px] bg-background-light-black">
         <div className="container px-[18px]">
           <nav className="flex items-center justify-between">
@@ -36,6 +44,7 @@ export const Header = () => {
                   icon={GiHamburgerMenu}
                   className="p-[9px]"
                   aria-label="Burger Menu button"
+                  onClick={() => setIsBurgerMenuOpen(true)}
                 />
               </div>
             )}
