@@ -1,14 +1,11 @@
-mport { counselor, toKnow } from './infoDropDownMenu.data'
-import { buy, overview, sell } from './myMobileDe.data'
-import { services, vehicleSearch } from './searchDropDownMenu.data'
-import {
-	dealerAreaList,
-	privateAndCommercialList,
-} from './sellDropDownMenu.data'
+import { counselor, toKnow } from "./infoMenu";
+import { buy, overview, sell } from "./myAuto";
+import { services, vehicleSearch } from "./searchMenu";
+import { dealerAreaList, privateAndCommercialList } from "./sellMenu";
 
 export const burgerNavMenu = [
-	{ title: 'Mein mobile.de', list: [overview, buy, sell] },
-	{ title: 'Suchen', list: [vehicleSearch, services] },
-	{ title: 'Verkaufen', list: [privateAndCommercialList, dealerAreaList] },
-	{ title: 'Informieren', list: [toKnow, counselor] },
-]
+  { title: "Mein mobile.de", list: [overview, buy, sell] },
+  { title: "Suchen", list: [vehicleSearch, services] },
+  { title: "Verkaufen", list: [privateAndCommercialList, dealerAreaList] },
+  { title: "Informieren", list: [toKnow, counselor] },
+];
