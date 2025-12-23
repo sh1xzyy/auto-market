@@ -14,18 +14,16 @@ import { useState } from "react";
 import { BurgerMenu } from "./ui/BurgerMenu/BurgerMenu";
 
 export const Header = () => {
-  const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false)
+  const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false);
   const { windowWidth } = useWindowWidth();
   const pathname = usePathname();
   const isPathAuth = pathname === routes.auth.base;
 
-  console.log(isBurgerMenuOpen)
-
   return (
     <>
-      {/* {isBurgerMenuOpen && !isPathAuth && (
-				<BurgerMenu setIsBurgerMenuOpen={setIsBurgerMenuOpen} />
-			)} */}
+      {isBurgerMenuOpen && !isPathAuth && (
+        <BurgerMenu setIsBurgerMenuOpen={setIsBurgerMenuOpen} />
+      )}
       <div className="flex items-center h-[72px] bg-background-light-black">
         <div className="container px-[18px]">
           <nav className="flex items-center justify-between">
